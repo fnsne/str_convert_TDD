@@ -29,3 +29,7 @@ func (suite *StrConverterTests) Test_upper_to_upper() {
 func (suite *StrConverterTests) Test_number_not_changed() {
 	assert.Equal(suite.T(), "1", converter("1"), "")
 }
+
+func (suite *StrConverterTests) Test_second_char_duplicate_twice() {
+	assert.Equal(suite.T(), "1-22", converter("12"), "")
+}
