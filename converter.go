@@ -1,5 +1,7 @@
 package TDD_string_convertor
 
+import "strings"
+
 func converter(input string) string {
-	return "A"
+	return strings.ToUpper(input)
 }
