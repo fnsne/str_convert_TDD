@@ -21,3 +21,7 @@ func (suite *StrConverterTests) SetupTest() {
 func (suite *StrConverterTests) Test_lower_to_upper() {
 	assert.Equal(suite.T(), "A", converter("a"), "")
 }
+
+func (suite *StrConverterTests) Test_upper_to_upper() {
+	assert.Equal(suite.T(), "A", converter("A"), "")
+}
