@@ -3,17 +3,13 @@ package TDD_string_convertor
 import "strings"
 
 func converter(input string) string {
-	if len(input) >= 2 {
-		var generatedStrings []string
-		for index, c := range input {
-			genString := duplicateByIndex(index, c)
-			genString = firstCharToUpper(genString)
-			generatedStrings = append(generatedStrings, genString)
-		}
-		return strings.Join(generatedStrings, "-")
-	} else {
-		return strings.ToUpper(input)
+	var generatedStrings []string
+	for index, c := range input {
+		genString := duplicateByIndex(index, c)
+		genString = firstCharToUpper(genString)
+		generatedStrings = append(generatedStrings, genString)
 	}
+	return strings.Join(generatedStrings, "-")
 }
 
 func firstCharToUpper(genString string) string {
