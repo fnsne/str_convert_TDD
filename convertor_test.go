@@ -37,3 +37,7 @@ func (suite *StrConverterTests) Test_second_char_duplicate_twice() {
 func (suite *StrConverterTests) Test_char_duplicate_by_its_index() {
 	assert.Equal(suite.T(), "1-22-333", converter("123"), "")
 }
+
+func (suite *StrConverterTests) Test_second_char_first_upper_second_lower() {
+	assert.Equal(suite.T(), "A-Bb", converter("ab"), "")
+}
