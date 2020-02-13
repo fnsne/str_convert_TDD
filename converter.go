@@ -6,13 +6,7 @@ func converter(input string) string {
 	if len(input) == 2 {
 		var generatedStrings []string
 		for index, c := range input {
-			var genString string
-			if index == 0 {
-				genString = string(c)
-			}
-			if index == 1 {
-				genString = string(c) + string(c)
-			}
+			genString := duplicateByIndex(index, c)
 			generatedStrings = append(generatedStrings, genString)
 		}
 		return strings.Join(generatedStrings, "-")
@@ -26,4 +20,15 @@ func converter(input string) string {
 	} else {
 		return strings.ToUpper(input)
 	}
+}
+
+func duplicateByIndex(index int, c int32) string {
+	var genString string
+	if index == 0 {
+		genString = string(c)
+	}
+	if index == 1 {
+		genString = string(c) + string(c)
+	}
+	return genString
 }
