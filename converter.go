@@ -24,11 +24,8 @@ func converter(input string) string {
 
 func duplicateByIndex(index int, c int32) string {
 	var genString string
-	if index == 0 {
-		genString = string(c)
-	}
-	if index == 1 {
-		genString = string(c) + string(c)
+	for i := 0; i < index+1; i++ {
+		genString += string(c)
 	}
 	return genString
 }
