@@ -6,12 +6,14 @@ func converter(input string) string {
 	if len(input) == 2 {
 		var generatedStrings []string
 		for index, c := range input {
+			var genString string
 			if index == 0 {
-				generatedStrings = append(generatedStrings, string(c))
+				genString = string(c)
 			}
 			if index == 1 {
-				generatedStrings = append(generatedStrings, string(c)+string(c))
+				genString = string(c) + string(c)
 			}
+			generatedStrings = append(generatedStrings, genString)
 		}
 		return strings.Join(generatedStrings, "-")
 	} else if len(input) == 3 {
