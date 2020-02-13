@@ -4,11 +4,15 @@ import "strings"
 
 func converter(input string) string {
 	if len(input) == 2 {
-		first := input[0]
-		second := input[1]
-		firstStatement := string(first)
-		secondStatement := string(second) + string(second)
-		generatedStrings := []string{firstStatement, secondStatement}
+		var generatedStrings []string
+		for index, c := range input {
+			if index == 0 {
+				generatedStrings = append(generatedStrings, string(c))
+			}
+			if index == 1 {
+				generatedStrings = append(generatedStrings, string(c)+string(c))
+			}
+		}
 		return strings.Join(generatedStrings, "-")
 	} else if len(input) == 3 {
 		first := input[0]
